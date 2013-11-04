@@ -1,0 +1,7 @@
+<h1>Edit <%= @tadpole.name %></h1>
+<%= form_for(@tadpole) do |f| %>
+  Name: <%= f.text_field :name %>
+  Color: <%= f.text_field :color %>
+  <%= f.submit %>
+<% end %>
+<a href="/tadpoles">Cancel</a>

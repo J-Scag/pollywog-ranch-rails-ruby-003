@@ -1,0 +1,8 @@
+<h1>Create a new frog</h1>
+<%= form_for(@frog) do |f| %>
+  Name: <%= f.text_field :name %>
+  Color: <%= f.text_field :color %>
+  Pond: <%= f.select :pond_id, @ponds.collect{|pond| [pond.name, pond.id]} %>
+  <%= f.submit %>
+<% end %>
+<a href="/frogs">Cancel</a>

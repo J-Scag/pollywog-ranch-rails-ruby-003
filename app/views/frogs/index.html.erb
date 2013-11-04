@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pollywog Ranch</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <nav>
+      <a href="/ponds">Ponds</a> | 
+      <a href="/frogs">Frogs</a> | 
+      <a href="/tadpoles">Tadpoles</a>
+    </nav>
+
+    <h1>Frogs</h1>
+    <% @frogs.each do |frog| %>
+      <p><a href="/frogs/<%= frog.id %>"><%= frog.name %></a></p>
+    <% end %>
+    <p><a href="/frogs/new">Create a new frog</a></p>
+
+  </body>
+</html>
